@@ -1,0 +1,51 @@
+<div class="table-content">
+    <div class="table-functions">
+        <div class="select-delete">
+            <img id="select-all" src="/assets/arrow-turn-left-down.png" alt="select-all ">
+            <button id="delete-button" type="button" [ngStyle]="{'background-color':isEmployeeSelected||isSelectAll?'#F44848':''}">Delete</button>
+        </div>
+        <div class="add-table-icon">
+            <img id="add-table" src="/assets/table-add.png" alt="add-table">
+        </div>
+    </div>
+    <div class="list-heading ">
+        <div class="sortable-coloumn"><input class="select-all-checkbox" type="checkbox" (change)="selectAllEmployees()" [checked]="isSelectAll"></div>
+        <div class="sortable-coloumn" id="sort-user" (click)="sortUser()">USER <i  class="fa-solid fa-sort"></i></div>
+        <div class="sortable-coloumn" id="sort-location" (click)="sortLoction()">LOCATION <i  class="fa-solid fa-sort"></i></div>
+        <div class="sortable-coloumn" id="sort-department"(click)="sortDepartment()">DEPARTMENT <i  class="fa-solid fa-sort"></i></div>
+        <div class="sortable-coloumn" id="sort-role"(click)="sortRole()">ROLE <i class="fa-solid fa-sort"></i></div>
+        <div class="sortable-coloumn" id="sort-emp-id" (click)="sortEmpId()">EMP NO <i   class="fa-solid fa-sort"></i></div>
+        <div class="sortable-coloumn" id="sort-status"(click)="sortStatus()">STATUS <i class="fa-solid fa-sort"></i></div>
+        <div class="sortable-coloumn" id="sort-join-date" (click)="sortJoinDate()">JOIN DT <i  class="fa-solid fa-sort"></i></div>
+        <div class="sortable-coloumn"><i class="fa-solid fa-ellipsis"></i></div>
+    </div>
+    <div class="employee-data">
+        <div class="employee-list" *ngFor="let employee of filteredEmployees">
+            <div class="checkbox-table"><input type="checkbox" [checked]="isSelectAll" (change)="selectEmployee()"></div>
+            <div class="list-profile">
+                <img src="{{employee.profilePicture}}" alt="profile">
+                <div>
+                    <div class="list-profile-name">{{employee.firstName+" "+employee.lastName}}</div>
+                    <div class="list-profile-mail">{{employee.email}}</div>
+                </div>
+            </div>
+            <div>{{(getLocationName(employee.roleId))}}</div>
+            <div>{{getDepartmentName(employee.roleId)}}</div>
+            <div>{{(getRoleName(employee.roleId))}}</div>
+            <div class="employee-id">{{employee.empId}}</div>
+            <div [ngClass]="{'active-status': employee.status.toUpperCase() === 'ACTIVE', 'inactive-status': employee.status.toUpperCase() === 'INACTIVE'}">{{employee.status}}</div>
+            <div>{{employee.joiningDate}}</div>
+            <div class="ellipsis-div">
+                <div (click)="toggleEllipsisDropdown(employee.id)">
+                    <i class="fa-solid fa-ellipsis fa-xl">
+                    </i>
+                </div>
+                <div class="dropdown-content" id="menu-{{employee.id}}" [ngStyle]="{'display': selectedEmployeeId===employee.id ? 'block' : 'none'}">
+                    <span routerLink="/employees/view-employee/{{employee.id}}">View</span>
+                    <span routerLink="/employees/edit-employee/{{employee.id}}">Edit</span>
+                    <span (click)="deleteEmployee(employee.id)">Delete</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

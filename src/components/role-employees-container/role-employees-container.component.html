@@ -1,0 +1,42 @@
+<div class="role-description">
+    <span id="role-description-header">Role Description</span>
+    <p id="role-description-text"> {{roles[0]? roles[0].description:'Not Found'}}</p>
+</div>
+<div class="employee-card-scroll">
+    <div class="employee-card" id="roles-employee-card">
+        <div class="particular-employee-manager"*ngFor="let employee of employees">
+            <div class="employee-data-card" >
+                <div class="employee-manager-container">
+                    <div class="profile-image-section">
+                        <img id="profile-image" alt="Profile Image" src="{{employee.profilePicture}}">
+                    </div>
+                    <div class="employee-name">
+                        <p>{{employee.firstName+' '+employee.lastName}}</p>
+                        <span>{{roles[0]? roles[0].name:'Not Found'}}</span>
+                    </div>
+                </div>
+                <div class="employee-id">
+                    <img src="/assets/employee-id.svg" alt="employee-id">
+                    <span>{{employee.empId}}</span>
+                </div>
+                <div class="employee-email">
+                    <img src="/assets/email.svg" alt="email" >
+                    <span>{{employee.email}}</span>
+                </div>
+                <div class="sub-department">
+                    <img src="/assets/department.svg" alt="sub-department">
+                    <span> {{department[0]?department[0].name:'Not Found'}}</span>
+                </div>
+                <div class="location-employee-card">
+                    <img src="/assets/location-pin.svg" alt="location-pin">
+                    <span>{{locations[0]?locations[0].name :'Not Found'}}</span>
+                </div>
+                    <div class="view-particular-employee" routerLink="/employees/view-employee/{{employee.id}}">
+                        <span>View</span>
+                        <img src="/assets/vector.svg" alt="arrow-right">
+                    </div>
+            </div>
+        </div>
+    </div>
+    
+</div>

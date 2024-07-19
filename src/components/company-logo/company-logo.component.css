@@ -1,0 +1,23 @@
+.brand-logo{
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+}
+#tezoIcon{
+    width: 30px;
+    display: none;
+}
+#tezologo{
+    margin-left: 10px;
+    width: 100px;
+}
+#left-arrow{
+    position: absolute;
+    width: 30px;
+    left: 18%;
+    top: 4%;
+    cursor: pointer;
+}
+.left-arrow-icon-div{
+    margin-left: auto;
+}

@@ -1,0 +1,147 @@
+<div class="add-employee-container-main">
+    <div class="add-employee-span">
+        {{title}}
+    </div>
+    <div class="add-employee-container">
+        <div class="add-profile-picture">
+            <div class="profile-picture">
+                <img  id="preview-img" [src]="imageBase64? imageBase64:'/assets/woman-profile-picture.png'" alt="Profile Picture">
+            </div>
+            <div class="add-profile-picture-button" [ngStyle]="{display:viewMode?'none':'block'}">
+                <input type="file" id="profile-pic" (change)="changeImage($event)">
+                <label for="profile-pic">Edit</label>
+            </div>
+        </div>
+        <div id="add-employee-form">
+            <form [formGroup]="Employee">
+                <div class="form-group">
+                    <span> Personal Information</span>
+                    <div class="employee-id">
+                        <p>Emp No                       
+                             <i class="compulsory-field">*</i>
+                        </p>
+                        <input type="text" id="employee-id" name="employee-id" formControlName="empId" placeholder="Enter emp no."  autocomplete="off" >
+                        @if(Employee.controls['empId'].errors?.['required'] && Employee.controls['empId'].touched){
+                            <span id="emp-error">This is required Field.</span>
+                        }@else if(Employee.controls['empId'].hasError('pattern') && Employee.controls['empId'].touched){
+                            <span id="emp-error">Please enter Emp No in the required format (TZ12345).</span>
+                        }                  
+                    </div>
+                    <div class="fname-lname-dob">
+                        <div class="first-name">
+                            <p>First Name
+                                <i class="compulsory-field">*</i>
+                            </p>
+                            <input type="text" id="first-name" name="first-name" formControlName="firstName"  placeholder="Enter first name"  autocomplete="off"  >
+                            @if(Employee.controls['firstName'].errors?.['required'] && Employee.controls['firstName'].touched){
+                                <span id="first-name-error">This is required Field.</span>
+                            }@else if(Employee.controls['firstName'].hasError('pattern') && Employee.controls['firstName'].touched){
+                                <span id="first-name-error">Please enter Alphabets Only.</span>
+                            }
+                        </div>
+                        <div class="last-name">
+                            <p>Last Name</p>
+                            <input type="text" id="last-name" name="last-name" formControlName="lastName"  placeholder="Enter last name" autocomplete="off"  >
+                            @if(Employee.controls['lastName'].hasError('pattern') && Employee.controls['lastName'].touched){
+                                <span id="last-name-error">Please enter Alphabets Only.</span>
+                            }
+                        </div>
+                        <div class="dob">
+                            <p>DOB
+                                <i class="compulsory-field">*</i>
+                            </p>
+                            <input type="date" id="dob" name="dob"  formControlName="dob" placeholder="Text" >
+                        </div>
+                    </div>
+                    <div class="email-phone-no">
+                        <div class="email">
+                            <p>Email
+                                <i class="compulsory-field">*</i>
+                            </p>
+                            <input type="email" id="email" name="email"  formControlName="email" placeholder="joe.j@technovert.com" autocomplete="off"  >
+                            @if(Employee.controls['email'].errors?.['required'] && Employee.controls['email'].touched){
+                                <span id="email-error">This is required Field.</span>
+                            }@else if(Employee.controls['email'].hasError('pattern') && Employee.controls['email'].touched){
+                                <span id="email-error">Please enter valid email.</span>
+                            }
+                        </div>
+                        <div class="phone-no">
+                            <p>Phone No
+                                <i class="compulsory-field">*</i>
+                            </p>
+                            <input type="text" id="phone-no" name="phone-no" formControlName="phoneNo"  placeholder="Enter 10 digit phone no." autocomplete="off">
+                            @if(Employee.controls['phoneNo'].errors?.['required'] && Employee.controls['phoneNo'].touched){
+                                <span id="phone-no-error">This is required Field.</span>
+                            }@else if(Employee.controls['phoneNo'].hasError('pattern') && Employee.controls['phoneNo'].touched){
+                                <span id="phone-no-error">Please enter valid phone no of 10 digits.</span>
+                            }
+                        </div>
+                    </div>
+                    <div class="employment-information">
+                        <span>Employment Information</span>
+                    </div>
+                    <div class="joining-date-location">
+                        <div class="joining-date">
+                            <p>Joining Date
+                                <i class="compulsory-field">*</i>
+                            </p>
+                            <input type="date" id="joining-date" name="joining-date" formControlName="joiningDate"  placeholder="Text" >
+                        </div>
+                        <div class="location" [formGroup]="locationForm">
+                            <p>Location</p>
+                            <select  id="add-employee-location"  formControlName="locationId" name="Location" (change)="changeLocation()">
+                                <option value="0" disabled selected>Select Location</option>
+                                <option *ngFor="let location of locations" value='{{location.id}}'>{{location.name}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="job-title-department" >
+                        <div class="department" [formGroup]="departmentForm">
+                            <p>Department</p>
+                            <select  id="add-employee-department"  formControlName="departmentId" (change)="changeDepartment()">
+                                <option value="0" disabled selected>Select Department</option>
+                                <option *ngFor="let department of departments" value='{{department.id}}'>{{department.name}}</option>
+                            </select>
+                        </div>
+                        <div class="job-title">
+                            <p>Job Title</p>
+                            <select  id="add-employee-title" formControlName="roleId">
+                                <option value="0" disabled selected>Select Job Title</option>
+                                <option *ngFor="let role of roles" value='{{role.id}}'>{{role.name}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="assign-manager-assign-project">
+                        <div class="assign-manager">
+                            <p>Assign Manager
+                                <i class="compulsory-field">*</i>
+                            </p>
+                            <!-- <input type="text" id="assign-manager" name="assign-manager" formControlName="managerId" placeholder="Assign-Manager" autocomplete="off" > -->
+                            <select  id="assign-manager" id="assign-manager" name="assign-manager" formControlName="managerId">
+                                <option value="0" disabled selected>Assign Manager</option>
+                                <option *ngFor="let manager of managers" value='{{manager.id}}'>{{getManagerNameById(manager.id)}}</option>
+                            </select>
+                        </div>
+                        <div class="assign-project">
+                            <p>Assign Project</p>
+                            <!-- <input type="text" id="assign-project" name="assign-project"  formControlName="projectId" placeholder="Assign-Project"  autocomplete="off"> -->
+                            <select  id="assign-project" name="assign-project"  formControlName="projectId">
+                                <option value="0" disabled selected>Assign Project</option>
+                                <option *ngFor="let project of projects" value='{{project.id}}'>{{project.name}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="action-buttons">
+                    <button  type="button" id="cancel" routerLink="/employees">Cancel</button>
+                    <button id="add-employee" type="button"[disabled]="Employee.invalid" (click)="addEmployee()" [ngStyle]="{display:editMode || viewMode?'none':'block' }">Add Employee</button>
+                    <button id="update-employee" type="button"[disabled]="Employee.invalid" (click)="updateEmployee()"  [ngStyle]="{display:editMode?'block':'none' }" >Update Employee</button>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+    
+            
+</div>

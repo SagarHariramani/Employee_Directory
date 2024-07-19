@@ -1,0 +1,14 @@
+<div class="more-filters">
+    <div class="filter-options">
+        <p>Filter</p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="#F66868" d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"/></svg>
+        <app-filter-option-status-dropdown (statusSelected)="selectedStatuses($event)" [isFilterReset]="isFilterReset" [ngStyle]="{display:currentRoute==='/roles'? 'none':'block'}"></app-filter-option-status-dropdown>
+        <app-filter-option-location-dropdown (locationSelected)="selectedLocations($event)" [isFilterReset]="isFilterReset"></app-filter-option-location-dropdown>
+        <app-filter-option-department-dropdown (departmentSelected)="selectedDepartments($event)" [isFilterReset]="isFilterReset" ></app-filter-option-department-dropdown>
+
+    </div>
+    <div class="filter-buttons">
+        <button id="filter-reset" type="button" (click)="resetFilter()">Reset</button>
+        <button id="filter-apply" type="button" (click)="applyFilter()">Apply</button>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+<div class="roles-card-scroll">
+    <div id="roles-container" class="roles-card" >
+      <div class="particular-roles-manager" *ngFor="let role of filteredRole">
+        <div class="roles-manager-container">
+          <div class="roles-manager-heading">
+            <span>{{role.name}}</span>
+          </div>
+          <div class="department">
+            <div class="department-heading">
+              <p>Department</p>
+            </div>
+            <div class="department-name">
+              <p>{{getDepartmentName(role.id)}}</p>
+            </div>
+          </div>
+          <div class="location">
+            <div class="location-heading">
+                <p>Location</p>
+            </div>
+            <div class="location-name">
+                <p>{{getLocationName(role.id)}}</p>
+            </div>
+          </div>
+          <div class="total-employees-count">
+            <p>Total Employees</p>
+            <div class="total-employees-images-count">
+                <div class="image-relative">
+                    <img src="{{getTopThreeEmployees(role.id)[0] ? getTopThreeEmployees(role.id)[0] : ''}}" [ngStyle]="{'display':getEmployeeCount(role.id)>0 ? '':'none'}" >
+                </div>
+                <div class="image-absolute">
+                    <img src="{{getTopThreeEmployees(role.id)[1] ? getTopThreeEmployees(role.id)[1] : ''}}" [ngStyle]="{'display':getEmployeeCount(role.id)>1 ? '':'none'}">
+                    <img class="image-absolute-container-image1" src="{{getTopThreeEmployees(role.id)[2] ? getTopThreeEmployees(role.id)[2] : ''}}" [ngStyle]="{'display':getEmployeeCount(role.id)>2 ? '':'none'}">
+                </div>
+                <div class="count">
+                    <p [ngStyle]="{'display': getEmployeeCount(role.id)-3>0 ? 'block':'none'}">+{{getEmployeeCount(role.id)-3}}</p>
+                </div>
+            </div>
+          </div>
+          <div class="view-all-employees" routerLink="roleid/{{role.id}}">
+            <p>View All Employees</p>
+            <img src="/assets/vector.svg" alt="arrow-right">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

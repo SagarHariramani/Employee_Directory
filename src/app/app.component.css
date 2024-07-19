@@ -1,0 +1,13 @@
+.main-container{
+    display: grid;
+    grid-template-columns: 18.75% 81.25%;
+    
+}
+#dashboard-main-content{
+    background-color: #FCFCFC;
+}
+.side-bar-container{
+    height: 100%;
+    background-color: #FFFFFF;
+    padding: 15px 0 0px 5px;
+}

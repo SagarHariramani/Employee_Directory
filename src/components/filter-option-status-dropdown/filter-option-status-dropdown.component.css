@@ -1,0 +1,29 @@
+.multi-select-filter-status{
+    width:70px;
+}
+.status-options{
+    width: 85px;
+    display: none;
+    position: absolute;
+    top: 25px;
+    left:10px;
+    border-radius: 5px;
+}
+.checkbox-status{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 77px;
+    border: 1px solid #FBC0C0;
+    border-radius: 5px;
+}
+.checkbox-status p{
+    margin:0px;
+    font-size:12px;
+    padding: 0 10px 0 5px;
+    color: black;
+}
+.filter-select-options{
+    font-family: Roboto300;
+    font-weight: 600;
+}

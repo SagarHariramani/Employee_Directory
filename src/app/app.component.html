@@ -1,0 +1,9 @@
+<div class="main-container" [ngStyle]="{'grid-template-columns': isExpanded?'':'4.5% 96.5%'}">
+    <div class="side-bar-container">
+        <app-side-navbar (isCollapsed)="collapse($event)"></app-side-navbar>
+    </div>
+    <div id="dashboard-main-content">
+        <app-search-bar></app-search-bar>
+        <router-outlet></router-outlet>
+    </div>
+</div>

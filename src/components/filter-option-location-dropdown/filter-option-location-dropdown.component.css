@@ -1,0 +1,29 @@
+.location-options{
+    width: 93px;
+    display: none;
+    position: absolute;
+    top: 25px;
+    left:10px;
+    border-radius: 5px;
+}
+.multi-select-filter-location{
+    width:85px;
+}
+.checkbox-location p{
+    margin:0px;
+    font-size:12px;
+    padding: 0 10px 0 5px;
+    color:black;
+}
+.checkbox-location{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 89px;
+    border: 1px solid #FBC0C0;
+    border-radius: 5px;
+}
+.filter-select-options{
+    font-family: Roboto300;
+    font-weight: 600;
+}

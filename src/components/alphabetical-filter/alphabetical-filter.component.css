@@ -1,0 +1,45 @@
+.filter-icon{
+    display: flex;
+    cursor: pointer;
+    width: 32px; 
+    height: 38px; 
+}
+#filter-icon-img{
+    margin: auto;
+    fill: black;
+}
+
+.alphabetical-filter{
+    margin: 15px 10px 10px 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.alphabets{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EAEBEE;
+    color: #8592A3;
+    width: 32px; 
+    height: 38px;   
+    border-radius: 5px;
+    cursor: pointer ;
+}
+.alphabets:hover{
+    background-color: #F44848;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.alphabets span{
+    display: inline-block;
+    text-align: center;
+    line-height: 10px; 
+    font-family: Roboto500;
+    width: 100%; 
+    font-size: small;
+}
+.alphabets:focus{
+    background-color: #F44848;
+    color: #FFFFFF;
+}

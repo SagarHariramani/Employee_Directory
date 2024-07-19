@@ -1,0 +1,172 @@
+.add-employee-container-main{
+    margin: 20px 10px 10px 20px;
+    height: 500px;
+    overflow-y: scroll;
+}
+.add-employee-container p{
+    margin-bottom: 5px;
+    font-family: Roboto400;
+    font-size: 12px;
+}
+.add-employee-container input {
+    width: 200px;
+    padding: 5px;
+    border: 1.5px solid #DFE1E6;
+    border-radius: 4px;
+    background-color: #FAFBFC;
+}
+#joining-date{  
+    width: 218px;
+    padding: 5px;
+    border: 1.5px solid #DFE1E6;
+    border-radius: 4px;
+    background-color: #FAFBFC;
+}
+.add-employee-container select {
+    width: 230px;
+    padding: 5px;
+    border: 1.5px solid #DFE1E6;
+    border-radius: 4px;
+    background-color: #FAFBFC;
+}
+.add-employee-container select:focus{
+    outline: 1.5px solid #4C9AFF;
+}
+::placeholder{
+    font-family: Roboto400;
+    font-size: 12px;
+    color: #7A869A;
+}
+.add-profile-picture{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.add-employee-span{
+    font-family: Roboto400;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+.add-employee-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+#add-employee-form{
+    margin-left: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.fname-lname-dob , .email-phone-no{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+.joining-date-location ,.job-title-department ,.assign-manager-assign-project{
+    display: flex;
+    justify-content:flex-start;
+    gap: 20px;
+    align-items: center;
+}
+
+.assign-manager-assign-project select{
+    padding: 6px 50px 6px 6px;
+}
+input:focus, textarea:focus{
+    border: none;
+    outline: 1.5px solid #4C9AFF;
+}
+
+span{
+    font-family: Roboto500;
+    font-size: 14px;
+}
+.employment-information{
+    padding: 20px 0px 10px 0;
+}
+
+.add-profile-picture-button {
+    font-size: 13px;
+    font-family: Roboto400;
+    cursor: pointer;
+
+}
+.add-profile-picture-button input{
+    display: none;
+}
+.add-profile-picture-button label{
+    font-family: Roboto400;
+    font-size: 13px;
+    cursor: pointer;
+}
+#preview-img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+#cancel{
+    background-color: #FDE6E6;
+    border-radius: 5px;
+    border: none;
+    padding: 5px 25px;
+    color: #F44848;
+    font-family: Roboto400;
+    font-size:13px;
+}
+#add-employee{
+    background-color: #F44848;
+    border-radius: 5px;
+    border: none;
+    padding: 5px 25px;
+    color: #FEF4F4;
+    font-family: Roboto400;
+    font-size: 13px;
+}
+#update-employee{
+    display: none;
+    background-color: #F44848;
+    border-radius: 5px;
+    border: none;
+    padding: 5px 25px;
+    color: #FEF4F4;
+    font-family: Roboto400;
+    font-size: 13px;
+}
+.action-buttons{
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;    
+    gap: 15px;
+}
+
+#emp-error, #first-name-error, #last-name-error, #email-error, #phone-no-error{
+    display: block;
+    color: #F44848;
+    font-family: Roboto400;
+    font-size: 10px;
+}
+.add-profile-picture-button label{
+    color: #F44848;
+    font-family: Roboto400;
+    font-size: 13px;
+    cursor: pointer;
+}
+.employee-id{
+    height: 55px;
+}
+.fname-lname-dob,.email-phone-no{
+    height: 65px;
+}
+.compulsory-field{
+    color:#F44848;
+}
+#assign-manager,#assign-project{
+    width: 230px;
+    padding: 5px;
+    border: 1.5px solid #DFE1E6;
+    border-radius: 4px;
+    background-color: #FAFBFC;
+}

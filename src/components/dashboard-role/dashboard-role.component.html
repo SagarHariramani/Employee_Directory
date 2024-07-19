@@ -1,0 +1,3 @@
+<app-role-action></app-role-action>
+<app-filter-bar (emitSelectedLocation)="filterRoleByLocation($event)" (emitSelectedDepartment)="filterRoleByDepartment($event)"></app-filter-bar>
+<app-dashboard-roles-container [employees]="employees" [roles]="roles" [location]="location" [department]="department" [filteredRole]="filteredRole"></app-dashboard-roles-container>

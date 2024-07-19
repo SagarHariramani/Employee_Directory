@@ -1,0 +1,42 @@
+.roles-actions {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 10px 10px 20px;
+}
+.roles-heading span{
+    color: #4C5F71;
+    margin: 0px;
+    font-size: 15px;
+    font-family: Roboto500;
+}
+.roles-heading p{
+    color:#83909C;
+    margin:10px 0 0 0;
+    font-family: Roboto400;
+    font-size: 14px;
+}
+.roles-actions-buttons{
+    display: flex;
+    justify-content: center;
+    margin: 5px 0px 0 0;
+}
+.roles-actions-buttons button{
+    margin-right:10px
+}
+#add-employee-button{
+    padding: 10px 30px;
+    background-color: #F44848;
+    color: #FFFFFF;
+    border: 0.2px solid #FFFFFF;
+    border-radius: 5px;
+    margin: 0 10px 13px 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    letter-spacing: 2px;
+
+}
+#add-employee-button  i{
+    padding-right: 5px;
+}
+#add-employee-button span{
+    font-size: 13px;
+}

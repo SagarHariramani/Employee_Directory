@@ -1,0 +1,59 @@
+.employee-action{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 10px 10px 20px;
+}
+.employee-action-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 5px 0px 0 0;
+}
+.employee-action-buttons button {
+    margin-right:10px
+}
+#export-button{
+    background-color: #FCFCFC;
+    color:#8592A3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #8592A3;
+    border-radius: 5px;
+    padding: 5px 20px;
+    font-family: Roboto500;
+    letter-spacing: 1px;
+    margin: 0 10px 13px 10px;
+}
+#export-icon{
+    padding: 0 5px 5px 0;
+}
+#add-employee-button {
+    padding: 10px 30px;
+    background-color: #F44848;
+    color: #FFFFFF;
+    border: 0.2px solid #FFFFFF;
+    border-radius: 5px;
+    margin: 0 0px 13px 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    letter-spacing: 2px;
+
+}
+#add-employee-button  i {
+    padding-right: 5px;
+}
+#add-employee-button span {
+    font-size: 13px;
+}
+.employees-heading span {
+    color: #4C5F71;
+    margin: 0px;
+    font-size: 15px;
+    font-family: Roboto500;
+}
+.employees-heading p {
+    color:#83909C;
+    margin:10px 0 0 0;
+    font-family: Roboto400;
+    font-size: 14px;
+}

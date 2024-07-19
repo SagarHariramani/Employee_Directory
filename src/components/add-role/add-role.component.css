@@ -1,0 +1,144 @@
+.create-roles-contianer{
+    height: 450px;
+    margin: 20px 10px 10px 20px;
+    overflow: scroll;
+}
+.create-roles-contianer p{
+    padding-left:10px;
+    margin-bottom: 5px;
+    font-family: Roboto400;
+    font-size: 12px;
+}
+.create-roles-heading{
+    font-family: Roboto400;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+.create-roles-name-department{
+    display: flex;
+    align-items: center;
+}
+.department{
+    padding-left: 10px;
+}
+.create-roles-contianer input {
+    padding: 7px;
+    border: none;
+}
+.create-roles{
+    padding: 10px;
+}
+textarea{
+    padding: 5px;
+    border: 2px solid #DFE1E6;
+}
+input:focus, textarea:focus {
+    outline: 1.5px solid #4C9AFF;
+}
+select{
+    padding: 6px 102px 6px 6px;
+    border: none;
+    background-color: #F4F5F7;
+    font-family:Roboto400;
+}
+.create-location select{
+    padding: 7px 250px 7px 7px;
+}
+.add-employee input{
+    padding: 7px 165px 7px 7px;
+}
+#cancel{
+    background-color: #FDE6E6;
+    border-radius: 5px;
+    border: none;
+    padding: 5px 25px;
+    color: #F44848;
+    font-family: Roboto400;
+    font-size:13px;
+}
+#add-roles-add-button{
+    background-color: #F44848;
+    border-radius: 5px;
+    border: none;
+    padding: 5px 25px;
+    color: #FEF4F4;
+    font-family: Roboto400;
+    font-size: 13px;
+}
+.action-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;    
+    gap: 15px;
+    margin-top:50px;
+}
+.img-name{
+    display: flex;
+    align-items: center;
+}
+.img-name img{
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.img-name p{
+    margin: 0;
+    font-family: Roboto400;
+    font-size: 14px;
+    color: black;
+}
+.employee{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: #F4F5F7;
+    border: 1px solid grey;
+    border-radius: 2px;
+    margin-top:5px
+}
+.employees-list{
+    width:228px;
+    display: none;
+}
+input[type="checkbox"]{
+    cursor: pointer;
+}
+input[type="checkbox"]:checked {
+    accent-color: #F44848;
+}
+.add-employee-container{
+    width:228px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F4F5F7;
+}
+.add-employee-container p{
+    margin:0px;
+    padding:10px;
+}
+.add-employee-container i{
+    padding:10px;
+    cursor: pointer;
+}
+#role-name-error,#department-error,#location-error{
+    display: none;
+    color: #F44848;
+    font-family: Roboto400;
+    font-size: 10px;
+}
+.role-name,.department{
+    height: 80px;
+}
+.create-location{
+    height:70px
+}
+textarea{
+    min-width: 400px;
+    min-height: 100px;
+}
+.compulsory-field{
+    color: #F44848;
+}

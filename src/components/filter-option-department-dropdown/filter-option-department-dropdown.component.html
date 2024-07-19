@@ -1,0 +1,14 @@
+<div class="filter-select-options">
+    <div class="multi-select-filter" id="multi-select-filter-department" (click)="toggleDropdown()">
+        <p>Department</p>
+        <i class="fa-solid fa-chevron-down fa-xs" style="color: #42526e;"></i>
+    </div> 
+    <div class="selected-options-department" id="selected-options-department">
+        <div class="department-options" id="department-options" [ngStyle]="{'display': isDropdownOpen ? 'block' : 'none'}">
+            <div class="checkbox-department" *ngFor="let department of departments" >
+                <input type="checkbox" id='{{department.name}}' [checked]="selectedDepartment.includes(department.name)" (change)="selectDepartment(department.name)">  
+                <p>{{department.name}}</p>
+            </div>
+        </div>
+    </div>
+</div>

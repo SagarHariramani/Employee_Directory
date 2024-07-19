@@ -1,0 +1,45 @@
+.update-section{
+    background-color: #FEF6F6;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    margin: 90px 10px 10px 0px;
+}
+#version-no{
+    color: #F44848;
+    font-size: 15px;
+    font-family: Roboto500;
+}
+.text-info-update-section p{
+    color: #BBC2C8;
+    font-size: 13px;
+    margin: 5px 2px;
+    font-family: Roboto400;
+}
+.text-info-update-section{
+    display: flex;
+    flex-direction: column;
+    padding: 15px 10px;
+}
+.update-section-buttons{
+    width: 80%;
+    display: flex;
+    padding-bottom: 20px;
+    justify-content: space-evenly;
+}
+#dismiss{
+    background-color: #FDE6E6;
+    border-radius: 8px;
+    border: none;
+    padding: 10px;
+    color: #F44848;
+    font-family: Roboto500
+}
+#accept{
+    background-color: #F44848;
+    border-radius: 8px;
+    border: none;
+    padding: 10px;
+    color: #FEF4F4;
+    font-family: Roboto500
+}

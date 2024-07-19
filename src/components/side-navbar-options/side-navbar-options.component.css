@@ -1,0 +1,77 @@
+.heading-options {
+    color: #BBC2C8;
+    font-family: Roboto400;
+    font-size: 12px;
+    padding: 15px 0 0 10px;
+}
+.dashboard-options-all{
+    position: relative;
+    display: flex;
+    font-family: Roboto400;
+    height: 20px;
+    width: 190px;
+    padding: 10px 10px 10px 0;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-left: 5px;
+    
+}
+.dashboard-options-all:hover{
+    background-color: #FDE9E9;
+}
+.menu-dashboard p{
+    padding-top: 0px;
+    font-size: 13px;
+    font-family: Roboto500;
+    letter-spacing: 1px;
+}
+.menu-dashboard{
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    padding-left: 5px;
+} 
+.dashboard-options-all span{
+    margin-left: auto;
+}
+
+.menu-dashboard{
+    position: relative;
+}
+.selected-mark{
+    position: absolute;
+    height: 95%;
+    border-radius: 2rem;
+    top: 2%;
+    right: -10%;
+    width: 2%;
+    background-color: #F44848;
+}
+.menu-dashboard img{
+    width: 20px;
+}
+.menu-dashboard p{
+    padding-left: 8px;
+}
+.menu-dashboard span{
+    margin-right: 10px;
+}
+.active-link{
+    background-color: #FDE9E9;
+    color: #F44848 !important;
+}
+#dashboard-option-employees {
+    background-color: #FDE9E9;    
+}
+#dashboard-option-employees .menu-dashboard p{
+    color: #F44848;
+}
+.dashboard-options-all span{
+    color:#BBC2C8
+}
+#role-role-usermanagment {
+    background-color: #FDE9E9;    
+}
+#role-role-usermanagment p, #role-role-usermanagment span{
+    color: #F44848;
+}

@@ -1,0 +1,4 @@
+<app-employee-action [filteredEmployees]="filteredEmployees"></app-employee-action>
+<app-filters (isFilterBarActive)="isFilterBar($event)" (isAlphabeticalFilterActive)="isAlphabeticalFilter($event)" (emitAlphabet)="filterEmployeeByAlphabet($event)" (emitStatus)="filterEmployeeByStatus($event)" (emitLocation)="filterEmployeeByLocation($event)" (emitDepartment)="filterEmployeeByDepartment($event)" ></app-filters>
+<app-dashboard-employee-table [employees]="employees" [roles]="roles" [locations]="locations" [departments]="department" [filteredEmployees]="filteredEmployees" [databaseOrderedEmployees]="databaseOrderedEmployees" (deleteEmployeeEvent)="deleteEmployee($event)" ></app-dashboard-employee-table>
+

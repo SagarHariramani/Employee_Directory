@@ -1,0 +1,72 @@
+
+<div class="create-roles-contianer">
+    <form [formGroup]="newRole">
+        <div class="create-roles">
+            <div class="create-roles-heading">
+                <span>Create New Role</span>
+            </div>
+            <div class="create-roles-name-department">
+                <div class="role-name">
+                    <p>Role Name                                
+                        <i class="compulsory-field">*</i>
+                    </p>
+                    <input  id="roles-name" type="text" name="role-name" formControlName="name" placeholder="Enter Role Name"  autocomplete="off" >
+                    <span id="role-name-error"></span>
+                </div>
+                <div class="department">
+                    <p>Department
+                        <i class="compulsory-field">*</i>
+                    </p>
+                    <select id="add-roles-department-select" name="select-department" formControlName="departmentId">
+                        <option value="0" disabled selected>Select Department</option>
+                        <option *ngFor="let department of departments" value='{{department.id}}'>{{department.name}}</option>
+                    </select>
+                    <span id="department-error"></span>
+                </div>
+            </div>
+            <div class="create-roles-desc-loc-employee">
+                <div class="create-desc">
+                    <p>Description</p>
+                    <textarea name="description" id="description" cols="50" rows="8" name="role-description" formControlName="description" placeholder="Text"></textarea>
+                </div>
+                <div class="create-location">   
+                    <p>Location
+                        <i class="compulsory-field">*</i>
+                    </p>
+                    <select id="add-roles-location-select" name="select-location" formControlName="locationId">
+                        <option value="0" disabled selected>Select Location</option>
+                        <option *ngFor="let location of locations" value='{{location.id}}'>{{location.name}}</option>
+                    </select>
+                    <span id="location-error"></span>
+                </div>
+                <div class="add-employee">
+                    <p>Assign employee</p>
+                    <!-- <select  id="add-roles-add-employees">
+                    </select> -->
+                    <div class="add-employee-container" (click)="toggleEmployeeList()">
+                        <p>Select Employees</p>
+                        <i class="fa-solid fa-chevron-down fa-xs" style="color: black;"></i>
+                    </div>    
+                    <div class="employees-list" [ngStyle]="{display:isEmployeeListVisible? '':'block'}">
+                        <div class="employee" *ngFor="let employee of unAssignedEmployees">
+                            <div class="img-name">
+                                <img src='{{employee.profilePicture}}' >
+                                <p>{{employee.firstName+" "+employee.lastName}}</p>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id='{{employee.firstName+" "+employee.lastName}}' name='{{employee.firstName+" "+employee.lastName}}' value='{{employee.firstName+" "+employee.lastName}}'>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <a href="../roles">
+                    <button id="cancel" type="button">Cancel</button>
+                </a>
+                <button id="add-roles-add-button" type="button"(click)="addRole()">Add Role</button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,35 @@
+<div class="side-navbar-options-all">
+    <p class="heading-options" [ngStyle]="{display:isExpanded?'':'none'}">ALL</p>
+    <div class="dashboard-options-all" [ngStyle]="{width:isExpanded?'':'20px'}"> 
+        <div class="menu-dashboard">
+            <img src="/assets/horizontal-nav/dashboard.svg" alt="lock">
+            <p [ngStyle]="{display:isExpanded?'':'none'}">Dashboard</p>
+        </div>
+    </div>
+    <div class="dashboard-options-all" routerLink="employees" routerLinkActive="active-link" [ngStyle]="{width:isExpanded?'':'20px'}">
+        <div class="menu-dashboard" >
+            <img [src]="isEmployeeTabActive ? '/assets/horizontal-nav/employees.svg' : '/assets/department.svg'" src="" alt="lock">
+            <p routerLinkActive="active-link" [ngStyle]="{display:isExpanded?'':'none'}">Employees</p>
+        </div>
+        <div [class.selected-mark]="isEmployeeTabActive" [ngStyle]="{width:isExpanded?'':'8%',right:isExpanded?'':'-15px'}"></div>
+    </div>
+</div>
+
+<div class="side-navbar-options-roles-users">
+    <p class="heading-options"[ngStyle]="{display:isExpanded?'':'none'}">ROLE / USER MANAGMENT</p>
+    <div class="dashboard-options-all" routerLink="roles" routerLinkActive="active-link" [ngStyle]="{width:isExpanded?'':'20px'}" >
+        <div class="menu-dashboard">
+            <img [src]="isRoleTabActive? '/assets/horizontal-nav/role-red.svg' : '/assets/horizontal-nav/roles.svg'" alt="lock">
+            <p routerLinkActive="active-link" [ngStyle]="{display:isExpanded?'':'none'}">Roles</p>
+        </div>
+        <span routerLinkActive="active-link" [ngStyle]="{display:isExpanded?'':'none'}">&#10095;</span>
+        <div [class.selected-mark]="isRoleTabActive" [ngStyle]="{width:isExpanded?'':'8%',right:isExpanded?'':'-15px'}"></div>
+    </div>
+    <div class="dashboard-options-all" [ngStyle]="{width:isExpanded?'':'20px'}">
+        <div class="menu-dashboard">    
+            <img src="/assets/horizontal-nav/assign-user.svg" alt="lock">
+            <p [ngStyle]="{display:isExpanded?'':'none'}">Access rights</p>
+        </div>
+        <span routerLinkActive="active-link" [ngStyle]="{display:isExpanded?'':'none'}">&#10095;</span>
+    </div>
+</div>

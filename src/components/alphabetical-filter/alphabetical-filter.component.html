@@ -1,0 +1,8 @@
+<div class="alphabetical-filter" id="alphabeticalfilter">
+    <div class="filter-icon" (click)="resetAlphabeticalFilter()">
+        <img id="filter-icon-img" alt="filter Icon" [src]="alphabetSelected? '/assets/interface/filter-red.svg' :'/assets/interface/filter-black.svg'">
+    </div> 
+    <div class="alphabets" *ngFor="let alphabet of alphabets" (click)="emitSelectedAlphabet(alphabet)" [ngStyle]="{ 'background-color': alphabetSelected === alphabet ? '#F44848' : '' ,'color': alphabetSelected===alphabet? '#FFFFFF':''}">
+        <span >{{alphabet}}</span>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="brand-logo-fixed">
+    <div class="brand-logo">
+        <img id="tezoIcon" src="/assets/company-logo.png" alt="tezologo" [ngStyle]="{display:expanded? '':'block' , 'margin-left':expanded? '':'4px'}">
+        <img id="tezologo" src="/assets/tezo-logo.png" alt="tezologo" [ngStyle]="{display:expanded? '':'none'}">
+        <div class="left-arrow-icon-div">
+            <img  id="left-arrow" src="/assets/handle.png" alt="arrow-left" (click)="collapse()" [ngStyle]="{left: expanded ? '' : '4%', rotate: expanded ? '' : '180deg'}">
+        </div>
+    </div>
+</div>

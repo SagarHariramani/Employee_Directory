@@ -1,0 +1,14 @@
+<div class="filter-select-options">
+    <div class="multi-select-filter" id="multi-select-filter-location"(click)="toggleDropdown()">
+        <p>Location</p>
+        <i class="fa-solid fa-chevron-down fa-xs" style="color: #42526e;"></i>
+    </div>
+    <div class="selected-options-location" id="selected-options-location">
+        <div class="location-options" id="location-options" [ngStyle]="{'display': isDropdownOpen ? 'block' : 'none'}">
+            <div class="checkbox-location" *ngFor="let location of locations" >
+                <input type="checkbox" id='{{location.name}}'  [checked]="selectedLocation.includes(location.name)" (change)="selectLocation(location.name)">  
+                <p>{{location.name}}</p>
+            </div>
+        </div>
+    </div>
+</div>

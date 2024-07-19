@@ -1,0 +1,17 @@
+#export-button{
+    background-color: #FCFCFC;
+    color:#8592A3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #8592A3;
+    border-radius: 5px;
+    padding: 5px 20px;
+    font-family: Roboto500;
+    letter-spacing: 1px;
+    margin: 0 10px 13px 10px;
+}
+#export-icon{
+    padding: 0 5px 5px 0;
+}

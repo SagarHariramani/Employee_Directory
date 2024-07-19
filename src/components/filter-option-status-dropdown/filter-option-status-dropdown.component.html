@@ -1,0 +1,14 @@
+<div class="filter-select-options" >
+    <div class="multi-select-filter" id="multi-select-filter-status" (click)="toggleDropdown()">
+        <p>Status</p>
+        <i class="fa-solid fa-chevron-down fa-xs" style="color: #42526e;"></i>
+    </div> 
+    <div class="selected-options-status" id="selected-options-status">
+        <div class="status-options" id="status-options" [ngStyle]="{'display': isDropdownOpen ? 'block' : 'none'}">
+            <div class="checkbox-status" *ngFor="let status of statuses" >
+                <input type="checkbox" id='{{status.name}}' [checked]="selectedStatus.includes(status.name)" (change)="selectStatus(status.name)">  
+                <p>{{status.name}}</p>
+            </div>
+        </div>
+    </div>
+</div>
